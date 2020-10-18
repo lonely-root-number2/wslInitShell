@@ -1,0 +1,2 @@
+Ubuntu下配置一些环境的shell
+rust，go都安装在~/Environment下
