@@ -6,7 +6,7 @@ else
 	echo "created folder Environment ok"
 fi
 cd ~/Environment
-echo "-----start install go 1.15.3-------"
+echo "start install go 1.15.3"
 wget -c https://studygolang.com/dl/golang/go1.15.3.linux-amd64.tar.gz
 tar -zxvf go1.15.3.linux-amd64.tar.gz
 rm go1.15.3.linux-amd64.tar.gz
@@ -15,8 +15,8 @@ mkdir "$pathroot/GOPATH"
 echo -e "\n\n" >> /etc/profile
 echo "export GOROOT=$pathroot/go" >> /etc/profile
 echo  "export GOPATH=$pathroot/GOPATH" >> /etc/profile
-echo  "export GOBIN=$pathroot/GOPATH" >> /etc/profile
-echo  "export PATH=\$PATH:\$GOROOT/bin:\$GOPATH/bin" >> /etc/profile
+echo  "export GOBIN=$pathroot/GOPATH/bin" >> /etc/profile
+echo  "export PATH=\$PATH:\$GOROOT/bin:\$GOBIN" >> /etc/profile
 
 source /etc/profile
 go env -w GO111MODULE=on

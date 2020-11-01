@@ -7,9 +7,13 @@ else
 fi
 cd ~/Environment
 echo "-------start install rust------"
+mkdir RUST
+cd RUST
 mkdir CARGO_HOME
 mkdir RUSTUP_HOME
 echo -e "\n\n" >> /etc/profile
+echo "export CARGO_HOME=~/Environment/RUST/CARGO_HOME" >> /etc/profile
+echo "export RUSTUP_HOME=~/Environment/RUST/RUSTUP_HOME" >> /etc/profile
 echo "export RUSTUP_DIST_SERVER=https://mirrors.ustc.edu.cn/rust-static" >> /etc/profile
 echo "export RUSTUP_UPDATE_ROOT=https://mirrors.ustc.edu.cn/rust-static/rustup" >> /etc/profile
 source /etc/profile
